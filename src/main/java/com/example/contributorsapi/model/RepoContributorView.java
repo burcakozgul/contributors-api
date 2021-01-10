@@ -1,6 +1,6 @@
 package com.example.contributorsapi.model;
 
-public class ContributorsView {
+public class RepoContributorView {
     private String login;
     private Long contributions;
 

@@ -14,10 +14,9 @@ public class ContributorsController {
     @Autowired
     private ContributorsService service;
 
-    //ekrana success yazdır
     @GetMapping()
     public ResponseEntity<String> getContributors() {
-        service.getContributors();
-        return ResponseEntity.ok("write to text file successful");
+        service.getRepoContributors();
+        return ResponseEntity.ok("Write to text successful");
     }
 }
