@@ -56,7 +56,7 @@ public class ContributorsService {
         try {
             for (RepoContributorView repoContributorView : response) {
                 Contributor contributor = new Contributor();
-                UserView userResponse = getUser(contributor);
+                UserView userResponse = getUser(repoContributorView.getLogin());
 
                 contributor.setRepo(repoName);
                 contributor.setUsername(repoContributorView.getLogin());
@@ -71,8 +71,8 @@ public class ContributorsService {
         return contributorList;
     }
 
-    private UserView getUser(Contributor contributor) {
-        return integration.getUser(contributor.getUsername());
+    private UserView getUser(String username) {
+        return integration.getUser(username);
     }
 
     private void writeToFile(List<Contributor> contributorList) {
