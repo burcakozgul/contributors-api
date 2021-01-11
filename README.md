@@ -2,7 +2,7 @@
 
 This application finds the top 10 contributors in the following repositories belong to apache organization and write to text file: spark, flink, hadoop, camel, druid.
 
-------
+
 
 ## Tools and technologies utilized in this project:
 
